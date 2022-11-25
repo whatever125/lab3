@@ -1,15 +1,13 @@
-package sources.story;
+package sources.characters;
 
-import sources.abstracts.AbstractHuman;
-import sources.enums.Place;
-import sources.interfaces.Creatureable;
-import sources.interfaces.Damageable;
+import sources.models.AbstractHuman;
+import sources.models.Place;
+import sources.models.Damageable;
 
-public class Neznaika extends AbstractHuman implements Creatureable, Damageable {
+public class Neznaika extends AbstractHuman {
 
     public Neznaika() {
         super("Незнайка");
-        System.out.println("Объект НЕЗНАЙКА создан");
     }
 
     @Override
@@ -45,7 +43,7 @@ public class Neznaika extends AbstractHuman implements Creatureable, Damageable 
         System.out.println("стал оглядываться по сторонам и смотреть, кто это его ударил. ");
     }
 
-    public void getFamous(double popularity) {
+    public void becomeFamous(double popularity) {
         setPopularity(popularity);
         if (popularity > 0.99) {
             System.out.println("В особенности Незнайка прославился после одной истории. ");

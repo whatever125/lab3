@@ -1,16 +1,14 @@
-package sources.story;
+package sources.characters;
 
-import sources.abstracts.AbstractBeetle;
-import sources.abstracts.AbstractHuman;
-import sources.enums.Place;
-import sources.interfaces.Creatureable;
-import sources.interfaces.Damageable;
+import sources.models.AbstractBeetle;
+import sources.models.AbstractHuman;
+import sources.models.Place;
+import sources.models.Damageable;
 
-public class MayBeetle extends AbstractBeetle implements Creatureable, Damageable {
+public class MayBeetle extends AbstractBeetle {
 
     public MayBeetle() {
         super("жук", "майский");
-        System.out.println("Объект МАЙСКИЙ ЖУК создан");
     }
 
     @Override

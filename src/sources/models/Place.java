@@ -1,4 +1,4 @@
-package sources.enums;
+package sources.models;
 
 public enum Place {
     FIELD,

@@ -1,8 +1,8 @@
-package sources.abstracts;
+package sources.models;
 
 import java.util.Objects;
 
-public abstract class AbstractBeetle {
+public abstract class AbstractBeetle implements Damageable, Creatureable, Seeable, Flyable {
     private String name;
     private String type;
     private boolean ableToSee;
@@ -10,6 +10,7 @@ public abstract class AbstractBeetle {
     public AbstractBeetle(String name, String type) {
         this.name = name;
         this.type = type;
+        System.out.println("Объект " + type.toUpperCase() + " " + name.toUpperCase() + " создан");
     }
 
     public String getName() {
@@ -34,6 +35,13 @@ public abstract class AbstractBeetle {
 
     public void setAbleToSee(boolean ableToSee) {
         this.ableToSee = ableToSee;
+    }
+
+    @Override
+    public void becomeFamous(double popularity) {
+        if (popularity > 0.99) {
+            System.out.println("В особенности жук прославился после одной истории. ");
+        }
     }
 
     @Override

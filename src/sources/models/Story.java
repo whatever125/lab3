@@ -1,11 +1,13 @@
-package sources.story;
+package sources.models;
 
-import sources.enums.Place;
+import sources.characters.MayBeetle;
+import sources.characters.Neznaika;
+import sources.characters.Nobody;
 
 public class Story {
-    private final Neznaika neznaika;
-    private final MayBeetle mayBeetle;
-    private final Nobody nobody;
+    private final AbstractHuman neznaika;
+    private final AbstractBeetle mayBeetle;
+    private final Creatureable nobody;
 
     public Story() {
         System.out.println("ИСТОРИЯ создается...");
@@ -19,7 +21,7 @@ public class Story {
         System.out.println();
         System.out.println("----------");
         System.out.println();
-        neznaika.getFamous(1);
+        neznaika.becomeFamous(1);
         neznaika.act(Place.CITY);
         neznaika.act(Place.FIELD);
         nobody.act(Place.VOKRUG);

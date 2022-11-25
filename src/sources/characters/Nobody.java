@@ -1,17 +1,14 @@
-package sources.story;
+package sources.characters;
 
-import sources.abstracts.AbstractHuman;
-import sources.enums.Place;
-import sources.interfaces.Creatureable;
+import sources.models.Place;
+import sources.models.Creatureable;
 
-public class Nobody extends AbstractHuman implements Creatureable {
+public class Nobody implements Creatureable {
 
     public Nobody() {
-        super("Никто");
         System.out.println("Объект НИКТО создан");
     }
 
-    @Override
     public void act(Place place) {
         switch (place) {
             case VOKRUG -> System.out.println("Вокруг не было ни души. ");
@@ -21,12 +18,9 @@ public class Nobody extends AbstractHuman implements Creatureable {
     }
 
     @Override
-    public boolean canSee() {
-        return true;
-    }
-
-    @Override
-    public void watch() {
-
+    public void becomeFamous(double popularity) {
+        if (popularity > 0.99) {
+            System.out.println("В особенности никто не прославился. ");
+        }
     }
 }
